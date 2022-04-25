@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main id="main-main">
+    <div class="container">
+        {% with messages = get_flashed_messages(with_categories = true) %}
+            {% if messages %}
+                {% for cat, msg in messages %}
+                    {% if cat == 'user-created' %}
+                        <div class="alert alert-success">
+                            {{msg}}
+                            <button type="button" class="close" data-dismiss = "alert" onclick="this.parentElement.style.display='none'">&times;</button>
+
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+
+    <div class="container">
+        
+        <header class="row">
+            <div class="col-12 col-md-6" id="header-text">
+                <h2>Build The Hero You Want To Be! </h2>
+                <h5>Create and Store your own world of Heroes and Villians</h5>
+                <div>
+                    <button class="btn btn-primary" id="btn1">Hero Collections</button>
+                    <button class="btn btn-primary" id="btn2">Join The Team</button>
+                </div>
+            </div>
+            <!-- Header Image -->
+        </header>
+            <!-- End of Header Section -->
+
+            <!-- Star of Middle Section -->
+            <section class="row">
+                <div class="col-12" id="middle-text">
+                    <h2>Be A Hero</h2>
+                    <p>You can harness the power of all the Infinity Stones with our API</p>
+                </div>
+            </section>
+            <!-- End of Middle Section -->
+
+            <!-- Collection of Features Seciotn -->
+            <section class="row" id="features-section">
+                <div class="col-12 col-md-4">
+                <img src="../../static/images/singlesword.jpg" alt="API Image" id="api-image"> 
+                <h4>Our Routes Are Dedicated</h4>
+                <p>
+                    For those who always honer tradition, we honor The Code.
+                </p>
+                </div>
+                <div class="col-12 col-md-4">
+                <img src="../../static/images/two-swords.png" alt="graphql-image" id="graphql-image">
+                <h4>GraphQL API Route</h4>
+                <p>
+                    If you are of singular focus and will for your data endpoints. 
+                </p>
+            </div>
+
+                <div class="col-12 col-md-4">
+                <img src="../../static/images/shield.jpg" alt="database image" id="database-image">
+                <h4>Backed by a PostgreSQL Database</h4>
+                <p>
+                    All data will be as safe as Mary Jane in Spiderman's Arms.
+                </p>
+                </div>
+            </section>
+            <!-- End of Collection of Features -->
+
+            <!-- Start of Community Section -->
+            <section class="row" id="commsec">
+                <div class="col-12 col-md-6">
+                    <img src="../../static/images/swordcircle.jpg" alt="Drone Image" id="Drone-image">               
+                </div>
+                <div class="col-12 col-md-6">
+                    <h4>Talk with Other Heroes and Masterminds</h4>
+                    <p>
+                        Talk with our growing community of Super Hero creators.
+                        Compare ideas, create worlds, and battle your creations,
+                        to see who will rule the world of your mind.
+                    </p>
+                    <div>
+                        <button class="btn btn-primary">View Our Code</button>
+                        <button class="btn btn-primary">Join the Fight on Slack</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- End of Community Section -->
+
+            <!-- Start of Footer -->
+            <footer class="row" id="footer">
+                <div class="col-2 col-md-2">
+                <img src="../../static/images/swor_circle.webp" alt="Coding Drones Logo" id="footer-logo"> 
+                </div>
+                <div class="col-2 col-md-2">
+                    <div class="footer-text-flex">
+                        <h4>The Vengence League</h4>
+                        <p>Why We Choose Vengence?</p>
+                        <p>The Vengence League Project</p>
+                        <p>Join the Fight</p>
+                        <p>Spread the word</p>
+                        <p>Our Process</p>
+                    </div>
+                </div>
+                <div class="col-2 col-md-2">
+                    <div class="footer-text-flex">
+                        <h4>The Vengence League</h4>
+                        <p>Why We Choose Vengence?</p>
+                        <p>The Vengence League Project</p>
+                        <p>Join the Fight</p>
+                        <p>Spread the word</p>
+                        <p>Our Process</p>
+                    </div>
+                </div>
+                <div class="col-2 col-md-2">
+                    <div class="footer-text-flex">
+                        <h4>The Vengence League</h4>
+                        <p>Why We Choose Vengence?</p>
+                        <p>The Vengence League Project</p>
+                        <p>Join the Fight</p>
+                        <p>Spread the word</p>
+                        <p>Our Process</p>
+                    </div>
+                </div>
+                
+
+            
+            </footer>
+
+        
+    </div>
+</main>
+{% endblock content %}

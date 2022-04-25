@@ -1,0 +1,1 @@
+web: gunicorn hero_inventory:app --preload
